@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000; /* Latar belakang abu-abu */
+            color: #0047BB; /* Warna teks biru tua */
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #FFFFFF;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        #countdown, #proceedButton {
+            display: none;
+            font-size: 18px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        #proceedButton {
+            padding: 10px 20px;
+            background-color: #0047BB;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #proceedButton:hover {
+            background-color: #003399;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula</h1>
+</header>
+
+<div class="container">
+    <!-- Bagian Pengantar dengan Gambar -->
+    <div class="section">
+        <p>Investasi adalah cara yang baik untuk menumbuhkan aset Anda. Namun, memahami jenis investasi dan cara yang benar untuk memulai adalah langkah pertama yang penting. Artikel ini akan membantu Anda mengenal jenis-jenis investasi dan memberikan panduan bagi pemula untuk memulai perjalanan investasi mereka.</p>
+        <img src="https://syailendracapital.com/uploads/2022/10/f24c2ad3aaa067b5cea0fda053377bde_5d96f79754a78924c3537412fd49caa0.jpg" alt="Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula">
+    </div>
+
+    <!-- Countdown Timer dengan Tombol -->
+    <div class="section" style="text-align: center;">
+        <p>Anda akan diarahkan ke halaman utama dalam <span id="countdown">10</span> detik...</p>
+        <button id="proceedButton" onclick="redirectToMainPage()">Lanjut ke Halaman Utama</button>
+    </div>
+</div>
+
+<script>
+    // Countdown Timer
+    let countdown = 3;
+    const countdownElement = document.getElementById('countdown');
+    const proceedButton = document.getElementById('proceedButton');
+
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+        countdownElement.style.display = "inline"; // Menampilkan countdown
+
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            countdownElement.style.display = "none"; // Sembunyikan countdown
+            proceedButton.style.display = "inline-block"; // Tampilkan tombol setelah hitungan mundur selesai
+        }
+    }, 1000);
+
+    // Redirect Function
+    function redirectToMainPage() {
+        window.location.href = "https://t.ly/kolamhadiah"; // Ganti dengan link tujuan
+    }
+</script>
+
+</body>
+</html>
