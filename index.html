@@ -3,102 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula</title>
+    <title>Investasi untuk Pemula</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #000000; /* Latar belakang abu-abu */
-            color: #0047BB; /* Warna teks biru tua */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            width: 90%;
+            max-width: 800px;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        .header {
+            background-color: #000000;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
+
+        .header h1 {
             color: #FFFFFF;
+            font-size: 24px;
         }
-        .section {
-            margin-bottom: 20px;
+
+        .countdown {
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+            color: #0047bb;
         }
-        img {
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .redirect-button {
+            background-color: #0047bb;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Initially hidden */
+        }
+
+        .redirect-button:hover {
+            background-color: #003399;
+        }
+
+        .content {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .content p {
+            margin: 15px 0;
+        }
+
+        .content img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 15px;
         }
-        #countdown, #proceedButton {
-            display: none;
-            font-size: 18px;
-            margin-top: 15px;
-            text-align: center;
-        }
-        #proceedButton {
-            padding: 10px 20px;
-            background-color: #0047BB;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #proceedButton:hover {
-            background-color: #003399;
-        }
     </style>
+    <script>
+        let countdownTime = 3; // Waktu hitung mundur dalam detik
+
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            const redirectButton = document.querySelector(".redirect-button");
+            
+            const countdownInterval = setInterval(() => {
+                if (countdownTime > 0) {
+                    countdownElement.textContent = `Ambil Hadiah mu.. Tunggu ${countdownTime} detik lagi...`;
+                    countdownTime--;
+                } else {
+                    clearInterval(countdownInterval);
+                    countdownElement.style.display = "none"; // Hide countdown text
+                    redirectButton.style.display = "inline-block"; // Show the button
+                }
+            }, 1000);
+        }
+
+        function redirectToWebsite() {
+            window.location.href = "https://www.xxxxxxx.com";
+        }
+
+        window.onload = startCountdown;
+    </script>
 </head>
 <body>
 
-<header>
-    <h1>Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula</h1>
-</header>
+    <div class="container">
+        <div class="header">
+            <h1>Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula</h1>
+        </div>
 
-<div class="container">
-    <!-- Bagian Pengantar dengan Gambar -->
-    <div class="section">
-        <p>Investasi adalah cara yang baik untuk menumbuhkan aset Anda. Namun, memahami jenis investasi dan cara yang benar untuk memulai adalah langkah pertama yang penting. Artikel ini akan membantu Anda mengenal jenis-jenis investasi dan memberikan panduan bagi pemula untuk memulai perjalanan investasi mereka.</p>
-        <img src="https://syailendracapital.com/uploads/2022/10/f24c2ad3aaa067b5cea0fda053377bde_5d96f79754a78924c3537412fd49caa0.jpg" alt="Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula">
+        <div class="countdown" id="countdown"></div>
+
+        <div class="button-container">
+            <button class="redirect-button" onclick="redirectToWebsite()">Kunjungi Situs</button>
+        </div>
+
+        <div class="content">
+            <p>Investasi adalah cara yang baik untuk menumbuhkan aset Anda. Namun, memahami jenis investasi dan cara yang benar untuk memulai adalah langkah pertama yang penting. Artikel ini akan membantu Anda mengenal jenis-jenis investasi dan memberikan panduan bagi pemula untuk memulai perjalanan investasi mereka.</p>
+
+            <img src="https://syailendracapital.com/uploads/2022/10/f24c2ad3aaa067b5cea0fda053377bde_5d96f79754a78924c3537412fd49caa0.jpg" alt="Mengenal Jenis Investasi dan Cara Berinvestasi untuk Pemula" alt="Gambar Investasi">
+
+            <p>Dengan mengetahui berbagai jenis investasi, seperti saham, obligasi, dan reksa dana, Anda bisa menentukan pilihan yang paling sesuai dengan tujuan finansial dan toleransi risiko Anda. Memulai investasi dari sekarang dapat membantu Anda mempersiapkan masa depan yang lebih baik.</p>
+        </div>
     </div>
-
-    <!-- Countdown Timer dengan Tombol -->
-    <div class="section" style="text-align: center;">
-        <p>Anda akan diarahkan ke halaman utama dalam <span id="countdown">10</span> detik...</p>
-        <button id="proceedButton" onclick="redirectToMainPage()">Lanjut ke Halaman Utama</button>
-    </div>
-</div>
-
-<script>
-    // Countdown Timer
-    let countdown = 3;
-    const countdownElement = document.getElementById('countdown');
-    const proceedButton = document.getElementById('proceedButton');
-
-    const countdownInterval = setInterval(() => {
-        countdown--;
-        countdownElement.textContent = countdown;
-        countdownElement.style.display = "inline"; // Menampilkan countdown
-
-        if (countdown <= 0) {
-            clearInterval(countdownInterval);
-            countdownElement.style.display = "none"; // Sembunyikan countdown
-            proceedButton.style.display = "inline-block"; // Tampilkan tombol setelah hitungan mundur selesai
-        }
-    }, 1000);
-
-    // Redirect Function
-    function redirectToMainPage() {
-        window.location.href = "https://t.ly/kolamhadiah"; // Ganti dengan link tujuan
-    }
-</script>
 
 </body>
 </html>
